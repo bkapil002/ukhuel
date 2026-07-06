@@ -92,7 +92,7 @@ export default function HuelHeader() {
   };
 
   return (
-    <header className="w-full font-sans">
+    <header className="relative z-50 w-full font-sans">
       {/* Top promo ticker */}
       <div
         className="bg-black text-white overflow-hidden whitespace-nowrap"
@@ -113,7 +113,7 @@ export default function HuelHeader() {
       </div>
 
       {/* Main nav */}
-      <div className="relative bg-white border-b border-gray-100" onMouseLeave={closeMenu}>
+      <div className="relative z-50 bg-white border-b border-gray-100" onMouseLeave={closeMenu}>
         <div className="max-w-[1654px] mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between h-20 relative">
           {/* Hamburger — visible only below 1248px */}
           <button
@@ -186,13 +186,16 @@ export default function HuelHeader() {
 
         {/* Mobile "Which Huel" pill row — below 1248px only */}
         <div className="min-[1248px]:hidden flex justify-center px-4 py-3 border-t border-gray-100">
-          <a href="#" className="inline-flex items-center gap-1.5 px-18 py-2 rounded-full border border-gray-300 bg-[#c7f1c5] text-black text-sm font-medium hover:border-green-200 transition-colors">
+          <a href="#" className="inline-flex items-center justify-center gap-1.5 w-full max-w-[320px] px-4 sm:px-8 py-2 rounded-full border border-gray-300 bg-[#c7f1c5] text-black text-sm font-medium hover:border-green-200 transition-colors">
             <Sparkles size={15} strokeWidth={1.75} />
             Which Huel is right for you?
           </a>
         </div>
 
         {/* Desktop mega menus */}
+        {activeMenu && (
+          <div className="fixed inset-x-0 top-[120px] bottom-0 z-30 hidden min-[1248px]:block bg-black/20 backdrop-blur-sm pointer-events-none" />
+        )}
         <div className="hidden min-[1248px]:block">
           <ShopAllMegaMenu open={activeMenu === 'shop'} />
           <SimpleMegaMenu open={activeMenu === 'science'} columns={scienceColumns} />
@@ -216,7 +219,7 @@ export default function HuelHeader() {
         <>
           {/* Backdrop - click to close, only really visible/needed at tablet width where panel is half-width */}
           <div
-            className="fixed inset-0 z-[59] bg-black/40 min-[1248px]:hidden"
+            className="fixed inset-0 z-[59] bg-black/40 backdrop-blur-sm min-[1248px]:hidden"
             onClick={closeMobile}
           />
 
