@@ -53,7 +53,7 @@ function ShopPill({ title, image, highlight ,href}) {
     >
       <div className="flex items-center gap-3.5 min-w-0">
         <img src={image} alt={title} className="w-20 h-20 object-contain shrink-0" />
-        <span className="text-2xl font-bold text-neutral-900 truncate">{title}</span>
+        <span className="md:text-xl lg:text-2xl font-bold text-neutral-900 truncate">{title}</span>
       </div>
       <span className="flex h-15 w-15 items-center justify-center rounded-full bg-white shrink-0 shadow-sm border border-neutral-100 transition-transform group-hover:translate-x-0.5">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-neutral-800">
