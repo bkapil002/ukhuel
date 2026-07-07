@@ -3,7 +3,7 @@ import { Star } from 'lucide-react';
 export default function HeroSection() {
   return (
     <div className="relative w-full overflow-hidden bg-gradient-to-b from-[#ffd374] via-[#f2a142] to-[#bf570d]">
-      <div className="max-w-[1654px] mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16 lg:py-20">
+      <div className="max-w-[1354px] mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
           {/* Left: text content */}
           <div className="max-w-xl">

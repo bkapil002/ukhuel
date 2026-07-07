@@ -5,33 +5,33 @@ const goals = [
     title: 'More protein',
     href: '#',
     image:
-      'https://cdn.sanity.io/images/sy0wkh9n/productionv29/f906513ff87fcc4fbdd04ea6d268e95e28282a2e-1600x1067.png?auto=format&fit=max&q=75&w=900',
+      'https://huel.imgix.net/Black-edition-protein-shopper-mission-homepage-tile.png?auto=format&compress&w=500',
   },
   {
     title: 'Eat healthy',
     href: '#',
     image:
-      'https://cdn.sanity.io/images/sy0wkh9n/productionv29/8b3381d4bc6a26c94615e36cf72cf0d5de22b21d-1600x1255.png?auto=format&fit=max&q=75&w=900',
+      'https://huel.imgix.net/Lite_Ramen_Shopper_Mission_Homepage.png?auto=format&compress&w=500',
   },
   {
     title: 'Manage weight',
     href: '#',
     image:
-      'https://cdn.sanity.io/images/sy0wkh9n/productionv29/f906513ff87fcc4fbdd04ea6d268e95e28282a2e-1600x1067.png?auto=format&fit=max&q=75&w=900',
+      'https://huel.imgix.net/LITERTD_VANILLA-MATCHA_Home_Tile.png?auto=format&compress&w=500',
   },
   {
     title: 'Save time',
     href: '#',
     image:
-      'https://cdn.sanity.io/images/sy0wkh9n/productionv29/8b3381d4bc6a26c94615e36cf72cf0d5de22b21d-1600x1255.png?auto=format&fit=max&q=75&w=900',
+      'https://huel.imgix.net/UK_BAR_Home_Tile.png?auto=format&compress&w=500',
   },
 ];
 
 export default function FoodGoals() {
   return (
-    <section className="bg-white py-14 sm:py-16 lg:py-20">
-      <div className="max-w-[1654px] mx-auto px-4 sm:px-6 lg:px-10 ">
-        <h2 className="text-4xl sm:text-5xl lg:text-[56px] font-bold leading-tight text-black mb-9 sm:mb-12 lg:mb-16">
+    <section className="bg-white py-14 sm:py-16 lg:py-15">
+      <div className="max-w-[1354px] mx-auto px-4 sm:px-6 lg:px-10 ">
+        <h2 className="text-4xl sm:text-5xl  font-bold leading-tight text-black mb-9 sm:mb-12 lg:mb-16">
           Food to <span className="font-serif italic font-medium">fuel</span> your goals
         </h2>
 
