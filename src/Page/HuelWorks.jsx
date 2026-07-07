@@ -4,6 +4,7 @@ import balancedMacros from "../image/WhyHuel (2).png";
 import proteinSatiety from "../image/WhyHuel (3).png";
 import scientificallySupported from "../image/WhyHuel (5).png";
 import realIngredients from "../image/WhyHuel (4).png";
+import { Link } from 'react-router-dom';
 
 const images = {
   completeNutrition,
@@ -24,9 +25,9 @@ export default function WhyHuelWorks() {
             <span className="font-sans font-bold text-black">Why Huel</span>
             <span className="font-serif italic text-black">works</span>
           </h2>
-          <button className="px-5 py-3 rounded-full bg-black text-white text-sm font-semibold hover:bg-neutral-800 transition-colors shrink-0 self-start sm:self-auto cursor-pointer">
+          <Link to="/pages/health-benefits" className="px-5 py-3 rounded-full bg-black text-white text-sm font-semibold hover:bg-neutral-800 transition-colors shrink-0 self-start sm:self-auto cursor-pointer">
             See the science
-          </button>
+          </Link>
         </div>
 
         {/* Bento grid adjusted for phone (1 col), tablet (2 cols), and desktop (3 cols) */}

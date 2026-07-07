@@ -1,3 +1,29 @@
+const linkRoutes = {
+  'Black Edition Powder': '/collections/huel-powder',
+  Powder: '/collections/huel-powder',
+  Diet: '/collections/weight-loss',
+  'Essential Powder': '/collections/huel-powder',
+  'Daily Greens': '/collections/greens-superfoods',
+  'Daily Greens Ready-to-drink': '/collections/greens-superfoods',
+  'Lite Ready-To-Drink': '/collections/huel-rtd',
+  'Black Edition Ready-to-drink': '/collections/huel-rtd',
+  'Ready-To-Drink': '/collections/huel-rtd',
+  'Daily A-Z Vitamins': '/collections/drinks-snacks',
+  'Hot & Savoury': '/collections/huel-instant-mealsr',
+  Ramen: '/collections/huel-instant-mealsr',
+  'Complete Nutrition Bars': '/collections/drinks-snacks',
+  'Complete Protein': '/collections/protein-and-fitness',
+  'Science Advisory Board': '/pages/health-benefits',
+  'Quality Standards': '/pages/health-benefits',
+  Sustainability: '/pages/health-benefits',
+  'About Us': '/',
+  'Store locator': '/',
+  FAQs: '/',
+  'Partner With Us': '/',
+  'Reviews & Testimonials': '/',
+  'Huel+': '/',
+};
+
 export default function SimpleMegaMenu({ open, columns }) {
   return (
     <div
@@ -21,7 +47,7 @@ export default function SimpleMegaMenu({ open, columns }) {
                   {group.links.map((link) => (
                     <a
                       key={link}
-                      href="#"
+                      href={linkRoutes[link] || '/'}
                       className="text-sm font-semibold text-black hover:text-gray-600 transition-colors"
                     >
                       {link}

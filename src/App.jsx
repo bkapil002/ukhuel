@@ -14,6 +14,7 @@ import MealReplacement from "./ShopYour/MealReplacement";
 import HotInstant from "./ShopYour/HotInstant";
 import GreensSuperfoods from "./ShopYour/GreensSuperfoods";
 import DrinksSnacks from "./ShopYour/DrinksSnacks";
+import Science from "./Science/Science";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route path="/collections/huel-instant-mealsr" element={<HotInstant/>}/>
           <Route path="/collections/greens-superfoods" element={<GreensSuperfoods/>}/>
           <Route path="/collections/drinks-snacks" element={<DrinksSnacks/>}/>
+          <Route path="/pages/health-benefits" element={<Science/>}/>
         </Routes>
 
         <Footer />

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Huel = () => {
   return (
@@ -30,9 +31,9 @@ const Huel = () => {
                 </p>
               </div>
               <div>
-                <button className="bg-white hover:bg-neutral-100 text-black font-extrabold text-xs sm:text-sm px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer shadow-sm">
+                <Link to='/all-products' className="bg-white hover:bg-neutral-100 text-black font-extrabold text-xs sm:text-sm px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer shadow-sm">
                   Shop now
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -59,9 +60,9 @@ const Huel = () => {
                 </p>
               </div>
               <div>
-                <button className="bg-white hover:bg-neutral-100 text-black font-extrabold text-xs sm:text-sm px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer shadow-sm">
+                <Link to='/collections/bestsellers' className="bg-white hover:bg-neutral-100 text-black font-extrabold text-xs sm:text-sm px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer shadow-sm">
                   Shop now
-                </button>
+                </Link>
               </div>
             </div>
           </div>

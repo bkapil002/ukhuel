@@ -58,44 +58,78 @@ const aboutGroupsFlat = [
   },
 ];
 
+const linkRoutes = {
+  'Black Edition Powder': '/collections/huel-powder',
+  Powder: '/collections/huel-powder',
+  Diet: '/collections/weight-loss',
+  'Essential Powder': '/collections/huel-powder',
+  'Daily Greens': '/collections/greens-superfoods',
+  'Daily Greens Ready-to-drink': '/collections/greens-superfoods',
+  'Lite Ready-To-Drink': '/collections/huel-rtd',
+  'Black Edition Ready-to-drink': '/collections/huel-rtd',
+  'Ready-To-Drink': '/collections/huel-rtd',
+  'Daily A-Z Vitamins': '/collections/drinks-snacks',
+  'Hot & Savoury': '/collections/huel-instant-mealsr',
+  Ramen: '/collections/huel-instant-mealsr',
+  'Complete Nutrition Bars': '/collections/drinks-snacks',
+  'Complete Protein': '/collections/protein-and-fitness',
+  'Science Advisory Board': '/pages/health-benefits',
+  'Quality Standards': '/pages/health-benefits',
+  Sustainability: '/pages/health-benefits',
+  'About Us': '/',
+  'Store locator': '/',
+  FAQs: '/',
+  'Partner With Us': '/',
+  'Reviews & Testimonials': '/',
+  'Huel+': '/',
+};
+
 const collectionItems = [
   {
     title: 'Bestsellers',
+    href: '/all-products',
     bg: 'bg-[#f5f3ed]',
     image: 'https://huel.imgix.net/Bestsellers-Collection-Tile.png?auto=format&compress&w=300'
   },
   {
     title: 'Powdered Meals',
+    href: '/collections/huel-powder',
     bg: 'bg-[#f5f3ed]',
     image: 'https://huel.imgix.net/VisualNav_PowderedMeals.png?auto=format&compress&w=500'
   },
   {
     title: 'Ready-to-drink Meals',
+    href: '/collections/huel-rtd',
     bg: 'bg-[#f5f3ed]',
     image: 'https://huel.imgix.net/VisualNav_Ready-to-drink_Meals_(UK).png?auto=format&compress&w=500'
   },
   {
     title: 'Bundles',
+    href: '/collections/bundles',
     bg: 'bg-[#f5f3ed]',
     image: 'https://huel.imgix.net/VisualNav_Bundles-UK.png?auto=format&compress&w=500'
   },
   {
     title: 'Drinks & Snacks',
+    href: '/collections/drinks-snacks',
     bg: 'bg-[#f5f3ed]',
     image: 'https://huel.imgix.net/VisualNav_EnergyDrinksBars_(UK).png?auto=format&compress&w=500'
   },
   {
     title: 'Greens & Superfoods',
+    href: '/collections/greens-superfoods',
     bg: 'bg-[#f5f3ed]',
     image: 'https://huel.imgix.net/VisualNav_Green&Superfoods-UK.png?auto=format&compress&w=500'
   },
   {
     title: 'Hot Instant Meals',
+    href: '/collections/huel-instant-mealsr',
     bg: 'bg-[#f5f3ed]',
     image: 'https://huel.imgix.net/VisualNav_HotSavoury_LiteRamenONLY.png?auto=format&compress&w=500'
   },
   {
     title: 'Official Huel Merch',
+    href: '/all-products',
     bg: 'bg-[#f5f3ed]',
     image: 'https://huel.imgix.net/media/product/3ccdaf72-5e85-4a12-9a83-258040b5497e.png?auto=format&compress&w=300'
   },
@@ -104,22 +138,22 @@ const collectionItems = [
 const goalItems = [
   {
     title: 'More protein',
-    href: '#',
+    href: '/collections/protein-and-fitness',
     image: 'https://huel.imgix.net/Black-edition-protein-shopper-mission-homepage-tile.png?auto=format&compress&w=500',
   },
   {
     title: 'Eat healthy',
-    href: '#',
+    href: '/collections/complete-nutrition',
     image: 'https://huel.imgix.net/Lite_Ramen_Shopper_Mission_Homepage.png?auto=format&compress&w=500',
   },
   {
     title: 'Manage weight',
-    href: '#',
+    href: '/collections/weight-loss',
     image: 'https://huel.imgix.net/LITERTD_VANILLA-MATCHA_Home_Tile.png?auto=format&compress&w=500',
   },
   {
     title: 'Save time',
-    href: '#',
+    href: '/collections/eat-on-the-go',
     image: 'https://huel.imgix.net/UK_BAR_Home_Tile.png?auto=format&compress&w=500',
   },
 ];
@@ -189,17 +223,17 @@ export default function HuelHeader() {
 
           <nav className="hidden min-[1248px]:flex items-center gap-7 ml-10">
             <a
-              href="#"
+              href="/all-products"
               onMouseEnter={() => openMenu('shop')}
               className="flex items-center gap-1 text-sm font-bold text-neutral-800 hover:text-black transition-colors"
             >
               Shop all <ChevronDown size={14} strokeWidth={2.5} className="text-neutral-500" />
             </a>
-            <a href="#" onMouseEnter={closeMenu} className="text-sm font-bold text-neutral-800 hover:text-black transition-colors">
+            <a href="/all-products" onMouseEnter={closeMenu} className="text-sm font-bold text-neutral-800 hover:text-black transition-colors">
               Mix and Match
             </a>
             <a
-              href="#"
+              href="/pages/health-benefits"
               onMouseEnter={() => openMenu('science')}
               className={`flex items-center gap-1 text-sm font-bold transition-colors pb-6 -mb-6 border-b-2 ${activeMenu === 'science' ? 'text-black border-black' : 'text-neutral-800 border-transparent hover:text-black'
                 }`}
@@ -214,10 +248,10 @@ export default function HuelHeader() {
             >
               About <ChevronDown size={14} strokeWidth={2.5} className="text-neutral-500" />
             </a>
-            <a href="#" onMouseEnter={closeMenu} className="text-sm font-bold text-neutral-800 hover:text-black transition-colors">
+            <a href="/pages/health-benefits" onMouseEnter={closeMenu} className="text-sm font-bold text-neutral-800 hover:text-black transition-colors">
               Why Huel?
             </a>
-            <a href="#" onMouseEnter={closeMenu} className="text-sm font-bold text-neutral-800 hover:text-black transition-colors">
+            <a href="/pages/health-benefits" onMouseEnter={closeMenu} className="text-sm font-bold text-neutral-800 hover:text-black transition-colors">
               Guides & Articles
             </a>
             <a
@@ -230,7 +264,7 @@ export default function HuelHeader() {
           </nav>
 
           <div className="flex items-center gap-4 ml-auto" onMouseEnter={closeMenu}>
-            <a href="#" className="hidden min-[1248px]:inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-gray-300 bg-[#c7f1c5] text-black text-sm font-bold hover:border-green-200 transition-colors">
+            <a href="/pages/health-benefits" className="hidden min-[1248px]:inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-gray-300 bg-[#c7f1c5] text-black text-sm font-bold hover:border-green-200 transition-colors">
               <Sparkles size={15} strokeWidth={1.75} />
               Which Huel is right for you?
             </a>
@@ -248,7 +282,7 @@ export default function HuelHeader() {
 
         {/* Mobile "Which Huel" pill row — below 1248px only */}
         <div className="min-[1248px]:hidden flex justify-center px-4 py-3 border-t border-neutral-100 bg-white">
-          <a href="#" className="inline-flex items-center justify-center gap-1.5 w-full max-w-[320px] px-4 sm:px-8 py-2 rounded-full border border-gray-300 bg-[#c7f1c5] text-black text-sm font-bold hover:border-green-200 transition-colors">
+          <a href="/pages/health-benefits" className="inline-flex items-center justify-center gap-1.5 w-full max-w-[320px] px-4 sm:px-8 py-2 rounded-full border border-gray-300 bg-[#c7f1c5] text-black text-sm font-bold hover:border-green-200 transition-colors">
             <Sparkles size={15} strokeWidth={1.75} />
             Which Huel is right for you?
           </a>
@@ -321,7 +355,7 @@ export default function HuelHeader() {
                   {mobileShopTab === 'collection' && (
                     <div className="grid grid-cols-2 gap-3 mt-4">
                       {collectionItems.map((item) => (
-                        <div key={item.title} className="relative h-32 rounded-lg bg-[#f5f3ed] p-3 flex flex-col justify-between overflow-hidden group cursor-pointer border border-transparent hover:border-black/5 transition-all">
+                        <a href={item.href} onClick={closeMobile} key={item.title} className="relative h-32 rounded-lg bg-[#f5f3ed] p-3 flex flex-col justify-between overflow-hidden group cursor-pointer border border-transparent hover:border-black/5 transition-all">
                           <span className="text-xs font-bold text-neutral-900 z-10 leading-tight max-w-[70%]">{item.title}</span>
 
                           {/* Floating category image for mobile */}
@@ -333,10 +367,10 @@ export default function HuelHeader() {
                             />
                           )}
 
-                          <button aria-label={`Shop ${item.title}`} className="w-7 h-7 rounded-full bg-white flex items-center justify-center self-start shadow-sm z-10">
+                          <span aria-label={`Shop ${item.title}`} className="w-7 h-7 rounded-full bg-white flex items-center justify-center self-start shadow-sm z-10">
                             <ChevronRight size={14} strokeWidth={2.5} className="text-neutral-800" />
-                          </button>
-                        </div>
+                          </span>
+                        </a>
                       ))}
                     </div>
                   )}
@@ -345,7 +379,7 @@ export default function HuelHeader() {
                   {mobileShopTab === 'goal' && (
                     <div className="grid grid-cols-2 gap-3 mt-4">
                       {goalItems.map((item) => (
-                        <div key={item.title} className="relative h-32 rounded-lg overflow-hidden group cursor-pointer border border-transparent shadow-sm flex flex-col justify-between p-3.5">
+                        <a href={item.href} onClick={closeMobile} key={item.title} className="relative h-32 rounded-lg overflow-hidden group cursor-pointer border border-transparent shadow-sm flex flex-col justify-between p-3.5">
                           {/* Background Image */}
                           <img
                             src={item.image}
@@ -357,10 +391,10 @@ export default function HuelHeader() {
 
                           <span className="text-xs font-bold text-white z-10 leading-tight">{item.title}</span>
 
-                          <button aria-label={`Shop ${item.title}`} className="w-7 h-7 rounded-full bg-white flex items-center justify-center self-start shadow-sm z-10">
+                          <span aria-label={`Shop ${item.title}`} className="w-7 h-7 rounded-full bg-white flex items-center justify-center self-start shadow-sm z-10">
                             <ChevronRight size={14} strokeWidth={2.5} className="text-neutral-800" />
-                          </button>
-                        </div>
+                          </span>
+                        </a>
                       ))}
                     </div>
                   )}
@@ -372,11 +406,11 @@ export default function HuelHeader() {
                     </div>
                   )}
 
-                  <button className="w-full mt-4 py-3 rounded-full bg-black text-white text-sm font-bold uppercase tracking-wider cursor-pointer">
+                  <a href="/all-products" onClick={closeMobile} className="block text-center w-full mt-4 py-3 rounded-full bg-black text-white text-sm font-bold uppercase tracking-wider cursor-pointer">
                     Shop all
-                  </button>
+                  </a>
 
-                  <a href="#" className="mt-4 flex items-center gap-3 bg-[#c7f1c5] rounded-lg p-3.5 hover:bg-green-200 transition-colors">
+                  <a href="/pages/health-benefits" onClick={closeMobile} className="mt-4 flex items-center gap-3 bg-[#c7f1c5] rounded-lg p-3.5 hover:bg-green-200 transition-colors">
                     <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm">
                       <User size={16} strokeWidth={1.75} className="text-black" />
                     </div>
@@ -400,10 +434,10 @@ export default function HuelHeader() {
                   >
                     About <ChevronRight size={16} strokeWidth={2.5} className="text-neutral-500" />
                   </button>
-                  <a href="#" className="block px-4 py-3.5 border-t border-neutral-100 text-sm font-bold text-neutral-800 hover:text-black transition-colors">
+                  <a href="/pages/health-benefits" onClick={closeMobile} className="block px-4 py-3.5 border-t border-neutral-100 text-sm font-bold text-neutral-800 hover:text-black transition-colors">
                     Why Huel?
                   </a>
-                  <a href="#" className="block px-4 py-3.5 border-t border-b border-neutral-100 text-sm font-bold text-neutral-800 hover:text-black transition-colors">
+                  <a href="/pages/health-benefits" onClick={closeMobile} className="block px-4 py-3.5 border-t border-b border-neutral-100 text-sm font-bold text-neutral-800 hover:text-black transition-colors">
                     Guides & Articles
                   </a>
                 </nav>
@@ -453,7 +487,8 @@ function MobileSubPanel({ title, groups, onBack, onClose }) {
           {group.links.map((link) => (
             <a
               key={link}
-              href="#"
+              href={linkRoutes[link] || '/'}
+              onClick={onClose}
               className="flex items-center justify-between px-4 py-3.5 border-b border-neutral-100 text-sm font-bold text-neutral-800 hover:text-black transition-colors"
             >
               {link}

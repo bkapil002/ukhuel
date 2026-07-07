@@ -2,67 +2,75 @@ import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const collectionItems = [
-  { 
-    title: 'Bestsellers', 
-    bg: 'bg-[#f5f3ed]', 
-    image: 'https://huel.imgix.net/Bestsellers-Collection-Tile.png?auto=format&compress&w=300' 
+  {
+    title: 'Bestsellers',
+    href: '/all-products',
+    bg: 'bg-[#f5f3ed]',
+    image: 'https://huel.imgix.net/Bestsellers-Collection-Tile.png?auto=format&compress&w=300',
   },
-  { 
-    title: 'Powdered Meals', 
-    bg: 'bg-[#f5f3ed]', 
-    image: 'https://huel.imgix.net/VisualNav_PowderedMeals.png?auto=format&compress&w=500' 
+  {
+    title: 'Powdered Meals',
+    href: '/collections/huel-powder',
+    bg: 'bg-[#f5f3ed]',
+    image: 'https://huel.imgix.net/VisualNav_PowderedMeals.png?auto=format&compress&w=500',
   },
-  { 
-    title: 'Ready-to-drink Meals', 
-    bg: 'bg-[#f5f3ed]', 
-    image: 'https://huel.imgix.net/VisualNav_Ready-to-drink_Meals_(UK).png?auto=format&compress&w=500' 
+  {
+    title: 'Ready-to-drink Meals',
+    href: '/collections/huel-rtd',
+    bg: 'bg-[#f5f3ed]',
+    image: 'https://huel.imgix.net/VisualNav_Ready-to-drink_Meals_(UK).png?auto=format&compress&w=500',
   },
-  { 
-    title: 'Bundles', 
-    bg: 'bg-[#f5f3ed]', 
-    image: 'https://huel.imgix.net/VisualNav_Bundles-UK.png?auto=format&compress&w=500' 
+  {
+    title: 'Bundles',
+    href: '/collections/bundles',
+    bg: 'bg-[#f5f3ed]',
+    image: 'https://huel.imgix.net/VisualNav_Bundles-UK.png?auto=format&compress&w=500',
   },
-  { 
-    title: 'Drinks & Snacks', 
-    bg: 'bg-[#f5f3ed]', 
-    image: 'https://huel.imgix.net/VisualNav_EnergyDrinksBars_(UK).png?auto=format&compress&w=500' 
+  {
+    title: 'Drinks & Snacks',
+    href: '/collections/drinks-snacks',
+    bg: 'bg-[#f5f3ed]',
+    image: 'https://huel.imgix.net/VisualNav_EnergyDrinksBars_(UK).png?auto=format&compress&w=500',
   },
-  { 
-    title: 'Greens & Superfoods', 
-    bg: 'bg-[#f5f3ed]', 
-    image: 'https://huel.imgix.net/VisualNav_Green&Superfoods-UK.png?auto=format&compress&w=500' 
+  {
+    title: 'Greens & Superfoods',
+    href: '/collections/greens-superfoods',
+    bg: 'bg-[#f5f3ed]',
+    image: 'https://huel.imgix.net/VisualNav_Green&Superfoods-UK.png?auto=format&compress&w=500',
   },
-  { 
-    title: 'Hot Instant Meals', 
-    bg: 'bg-[#f5f3ed]', 
-    image: 'https://huel.imgix.net/VisualNav_HotSavoury_LiteRamenONLY.png?auto=format&compress&w=500' 
+  {
+    title: 'Hot Instant Meals',
+    href: '/collections/huel-instant-mealsr',
+    bg: 'bg-[#f5f3ed]',
+    image: 'https://huel.imgix.net/VisualNav_HotSavoury_LiteRamenONLY.png?auto=format&compress&w=500',
   },
-  { 
-    title: 'Official Huel Merch', 
-    bg: 'bg-[#f5f3ed]', 
-    image: 'https://huel.imgix.net/media/product/3ccdaf72-5e85-4a12-9a83-258040b5497e.png?auto=format&compress&w=300' 
+  {
+    title: 'Official Huel Merch',
+    href: '/all-products',
+    bg: 'bg-[#f5f3ed]',
+    image: 'https://huel.imgix.net/media/product/3ccdaf72-5e85-4a12-9a83-258040b5497e.png?auto=format&compress&w=300',
   },
 ];
 
 const goalItems = [
   {
     title: 'More protein',
-    href: '#',
+    href: '/collections/protein-and-fitness',
     image: 'https://huel.imgix.net/Black-edition-protein-shopper-mission-homepage-tile.png?auto=format&compress&w=500',
   },
   {
     title: 'Eat healthy',
-    href: '#',
+    href: '/collections/complete-nutrition',
     image: 'https://huel.imgix.net/Lite_Ramen_Shopper_Mission_Homepage.png?auto=format&compress&w=500',
   },
   {
     title: 'Manage weight',
-    href: '#',
+    href: '/collections/weight-loss',
     image: 'https://huel.imgix.net/LITERTD_VANILLA-MATCHA_Home_Tile.png?auto=format&compress&w=500',
   },
   {
     title: 'Save time',
-    href: '#',
+    href: '/collections/eat-on-the-go',
     image: 'https://huel.imgix.net/UK_BAR_Home_Tile.png?auto=format&compress&w=500',
   },
 ];
@@ -73,9 +81,9 @@ const tabs = [
   { key: 'help', label: 'Help me choose' },
 ];
 
-function CategoryCard({ title, bg, image }) {
+function CategoryCard({ title, href, bg, image }) {
   return (
-    <div className={`relative h-48 rounded-lg ${bg} p-5 flex flex-col justify-between overflow-hidden group cursor-pointer border border-transparent hover:border-black/10 transition-all duration-200`}>
+    <a href={href} className={`relative h-48 rounded-lg ${bg} p-5 flex flex-col justify-between overflow-hidden group cursor-pointer border border-transparent hover:border-black/10 transition-all duration-200`}>
       <span className="text-base font-bold text-neutral-900 z-10">{title}</span>
       
       {/* Absolute positioned product image matching screenshot */}
@@ -85,19 +93,19 @@ function CategoryCard({ title, bg, image }) {
         className="absolute bottom-0 right-0 h-[75%] w-[60%] object-contain object-bottom transition-transform duration-300 group-hover:scale-[1.04]"
       />
       
-      <button
+      <span
         aria-label={`Shop ${title}`}
         className="w-8 h-8 rounded-full bg-white flex items-center justify-center hover:bg-neutral-100 transition-colors self-start shadow-sm z-10 cursor-pointer"
       >
         <ArrowRight size={15} strokeWidth={2.5} className="text-neutral-800" />
-      </button>
-    </div>
+      </span>
+    </a>
   );
 }
 
-function GoalCard({ title, image }) {
+function GoalCard({ title, href, image }) {
   return (
-    <div className="relative h-[380px] rounded-lg overflow-hidden group shadow-sm flex flex-col justify-between p-5 cursor-pointer">
+    <a href={href} className="relative h-[380px] rounded-lg overflow-hidden group shadow-sm flex flex-col justify-between p-5 cursor-pointer">
       {/* Card Background Image */}
       <img 
         src={image} 
@@ -109,13 +117,13 @@ function GoalCard({ title, image }) {
       
       <span className="text-lg font-extrabold text-white z-10 leading-none">{title}</span>
       
-      <button
+      <span
         aria-label={`Shop ${title}`}
         className="w-8.5 h-8.5 rounded-full bg-white flex items-center justify-center hover:bg-neutral-100 transition-colors self-start z-10 shadow-sm cursor-pointer"
       >
         <ArrowRight size={16} strokeWidth={2.5} className="text-neutral-800" />
-      </button>
-    </div>
+      </span>
+    </a>
   );
 }
 
@@ -153,9 +161,9 @@ export default function ShopAllMegaMenu({ open = true }) {
           </nav>
           
           <div className="pl-4">
-            <button className="px-5 py-2.5 rounded-full bg-black text-white text-xs font-bold hover:bg-neutral-800 transition-colors cursor-pointer uppercase tracking-wider">
+            <a href="/all-products" className="inline-flex px-5 py-2.5 rounded-full bg-black text-white text-xs font-bold hover:bg-neutral-800 transition-colors cursor-pointer uppercase tracking-wider">
               Shop all
-            </button>
+            </a>
           </div>
         </div>
 
@@ -186,10 +194,10 @@ export default function ShopAllMegaMenu({ open = true }) {
                   Learn
                 </span>
                 <nav className="flex flex-col gap-4.5 mt-5">
-                  <a href="#" className="text-sm font-bold text-neutral-800 hover:text-black transition-colors">
+                  <a href="/pages/health-benefits" className="text-sm font-bold text-neutral-800 hover:text-black transition-colors">
                     Why Huel?
                   </a>
-                  <a href="#" className="text-sm font-bold text-neutral-800 hover:text-black transition-colors">
+                  <a href="/pages/health-benefits" className="text-sm font-bold text-neutral-800 hover:text-black transition-colors">
                     Guides & Articles
                   </a>
                 </nav>
@@ -199,7 +207,7 @@ export default function ShopAllMegaMenu({ open = true }) {
               <div className="flex-1 grid grid-cols-2 gap-4">
                 
                 {/* Banner 1: Help Choose */}
-                <div className="relative h-full rounded-lg bg-gradient-to-br from-[#d4763c] to-[#a34d20] p-6 flex flex-col justify-end overflow-hidden group cursor-pointer shadow-sm">
+                <a href="/pages/health-benefits" className="relative h-full rounded-lg bg-gradient-to-br from-[#d4763c] to-[#a34d20] p-6 flex flex-col justify-end overflow-hidden group cursor-pointer shadow-sm">
                   {/* Floating product image overlay */}
                   <img
                     src="https://cdn.sanity.io/images/sy0wkh9n/productionv29/b58c59ba92073ab050044f0ef9f9f966b3ecf4f3-1080x1080.png?auto=format&fit=max&q=75&w=500"
@@ -210,14 +218,14 @@ export default function ShopAllMegaMenu({ open = true }) {
                     <p className="text-white font-extrabold text-lg mb-3.5 leading-snug max-w-[220px]">
                       Not sure which product is right for you?
                     </p>
-                    <button className="bg-white hover:bg-neutral-100 text-black text-xs font-bold px-5 py-2.5 rounded-full transition-colors duration-200 cursor-pointer">
+                    <span className="inline-flex bg-white hover:bg-neutral-100 text-black text-xs font-bold px-5 py-2.5 rounded-full transition-colors duration-200 cursor-pointer">
                       Learn more
-                    </button>
+                    </span>
                   </div>
-                </div>
+                </a>
 
                 {/* Banner 2: Bestsellers */}
-                <div className="relative h-full rounded-lg bg-gradient-to-br from-[#aa573c] to-[#4c221a] p-6 flex flex-col justify-end overflow-hidden group cursor-pointer shadow-sm">
+                <a href="/all-products" className="relative h-full rounded-lg bg-gradient-to-br from-[#aa573c] to-[#4c221a] p-6 flex flex-col justify-end overflow-hidden group cursor-pointer shadow-sm">
                   {/* Floating product image overlay */}
                   <img
                     src="https://cdn.sanity.io/images/sy0wkh9n/productionv29/ac26b6eec58dbcbc9999b9e3bc668b1c22237dea-1080x1080.png?auto=format&fit=max&q=75&w=500"
@@ -228,11 +236,11 @@ export default function ShopAllMegaMenu({ open = true }) {
                     <p className="text-white font-extrabold text-lg mb-3.5 leading-snug max-w-[220px]">
                       Can't decide? Try our bestsellers
                     </p>
-                    <button className="bg-white hover:bg-neutral-100 text-black text-xs font-bold px-5 py-2.5 rounded-full transition-colors duration-200 cursor-pointer">
+                    <span className="inline-flex bg-white hover:bg-neutral-100 text-black text-xs font-bold px-5 py-2.5 rounded-full transition-colors duration-200 cursor-pointer">
                       Bestsellers
-                    </button>
+                    </span>
                   </div>
-                </div>
+                </a>
 
               </div>
 
