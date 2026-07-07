@@ -1,3 +1,5 @@
+import JoinHuel from "../Page/JoinHuel";
+
 const foodLinks = ['Powdered meals', 'Hot meals', 'On-the-go', 'Greens', 'Snacks', 'Nutrition', 'Accessories'];
 
 const companyLinks = [
@@ -43,6 +45,8 @@ function FooterColumn({ title, links }) {
 
 export default function Footer() {
   return (
+    <>
+    <JoinHuel/>
     <footer className="relative w-full font-sans text-white bg-black">
       {/* Image block: forest photo fading to black — only covers the top section */}
       <div className="relative">
@@ -124,5 +128,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </>
   );
 }

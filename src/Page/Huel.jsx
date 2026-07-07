@@ -3,7 +3,7 @@ import React from 'react'
 const Huel = () => {
   return (
     <section className="w-full bg-white py-12 sm:py-16">
-      <div className="max-w-[1354px] mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="max-w-[1654px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Promotional Banner Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

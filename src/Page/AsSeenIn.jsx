@@ -24,7 +24,7 @@ const pressItems = [
 export default function AsSeenIn() {
   return (
     <section className="w-full bg-black py-16">
-      <div className="max-w-[1354px] mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="max-w-[1654px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {pressItems.map((item) => (
             <div key={item.logoAlt} className="flex flex-col items-center text-center gap-6">

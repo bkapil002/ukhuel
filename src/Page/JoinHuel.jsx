@@ -8,7 +8,7 @@ const JoinHuel = () => {
 
   return (
     <section className="w-full bg-black text-white pt-16 sm:pt-20 pb-0">
-      <div className="max-w-[1354px] mx-auto px-4 sm:px-6 lg:px-10 pb-0">
+      <div className="max-w-[1654px] mx-auto px-4 sm:px-6 lg:px-10 pb-0">
         
         {/* Layout Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start pb-12 sm:pb-16">

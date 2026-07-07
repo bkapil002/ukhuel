@@ -108,8 +108,8 @@ const productsData = [
 const ShopOur = () => {
   return (
     <section className="w-full bg-white py-12 sm:py-16">
-      <div className="max-w-[1354px] mx-auto px-4 sm:px-6 lg:px-10">
-        
+      <div className="max-w-[1654px] mx-auto px-4 sm:px-6 lg:px-10">
+
         {/* Header Block */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 mb-8 md:mb-12">
           <div>
@@ -129,10 +129,10 @@ const ShopOur = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {productsData.map((product) => (
             <div key={product.id} className="flex flex-col group h-full">
-              
+
               {/* Image Container with Cream/Beige Background */}
               <div className="relative w-full aspect-square bg-[#f5f3ed] rounded-lg overflow-hidden flex items-center justify-center p-6 select-none">
-                
+
                 {/* Badge Tag */}
                 <div className="absolute top-4 left-4 z-10 bg-white px-2 py-1.5 rounded-sm flex items-center gap-1.5 shadow-sm border border-neutral-100">
                   {product.badgeType === 'bestseller' ? <FlameIcon /> : <SparklesIcon />}
@@ -145,9 +145,8 @@ const ShopOur = () => {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className={`object-contain max-h-[85%] max-w-[85%] transition-opacity duration-500 ease-in-out ${
-                    product.hoverImage ? 'group-hover:opacity-0' : 'group-hover:scale-105'
-                  }`}
+                  className={`object-contain max-h-[85%] max-w-[85%] transition-opacity duration-500 ease-in-out ${product.hoverImage ? 'group-hover:opacity-0' : 'group-hover:scale-105'
+                    }`}
                   loading="lazy"
                 />
 
@@ -164,7 +163,7 @@ const ShopOur = () => {
 
               {/* Text Information and Specs */}
               <div className="flex flex-col flex-grow pt-4">
-                
+
                 <div>
                   <h3 className="font-bold text-base text-neutral-900 leading-tight">
                     {product.name}
@@ -172,9 +171,13 @@ const ShopOur = () => {
                   <p className="text-sm text-neutral-600 mt-1 font-normal">
                     {product.subtitle}
                   </p>
-                  {product.itemsCount && (
+                  {product.itemsCount ? (
                     <p className="text-xs text-neutral-400 mt-1 font-normal">
                       {product.itemsCount}
+                    </p>
+                  ) : (
+                    <p className="text-xs mt-1 font-normal select-none opacity-0">
+                      &nbsp;
                     </p>
                   )}
                 </div>
@@ -182,8 +185,8 @@ const ShopOur = () => {
                 {/* Double Bordered Details Table */}
                 <div className="border-t border-[#e2dfd7] border-b divide-y divide-[#e2dfd7] mt-4">
                   {product.details.map((detail, idx) => (
-                    <div 
-                      key={idx} 
+                    <div
+                      key={idx}
                       className="flex items-center gap-3.5 py-2.5 text-xs font-medium text-neutral-600"
                     >
                       <div className="flex-shrink-0 flex items-center justify-center w-5 h-5">

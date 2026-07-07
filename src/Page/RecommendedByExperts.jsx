@@ -86,7 +86,7 @@ export default function RecommendedByExperts() {
 
   return (
     <section className="w-full bg-[#f6f4ee] py-16 sm:py-20 select-none">
-      <div className="max-w-[1354px] mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="max-w-[1654px] mx-auto px-4 sm:px-6 lg:px-10">
 
         {/* Heading */}
         <div className="mb-10 max-w-3xl">

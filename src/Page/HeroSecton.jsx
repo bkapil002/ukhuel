@@ -1,9 +1,10 @@
 import { Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function HeroSection() {
   return (
     <div className="relative w-full overflow-hidden bg-gradient-to-b from-[#ffd374] via-[#f2a142] to-[#bf570d]">
-      <div className="max-w-[1354px] mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16 lg:py-20">
+      <div className="max-w-[1654px] mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
           {/* Left: text content */}
           <div className="max-w-xl">
@@ -29,9 +30,9 @@ export default function HeroSection() {
               <button className="px-6 py-3 rounded-full bg-black text-white text-sm font-semibold hover:bg-gray-800 transition-colors">
                 Shop Mix and Match
               </button>
-              <button className="px-6 py-3 rounded-full border border-black text-black text-sm font-semibold hover:bg-black/5 transition-colors">
+              <Link to='/all-products' className="px-6 py-3 rounded-full border border-black text-black text-sm font-semibold hover:bg-black/5 transition-colors">
                 Shop all Huel
-              </button>
+              </Link>
             </div>
           </div>
 

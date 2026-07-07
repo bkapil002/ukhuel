@@ -16,7 +16,7 @@ const images = {
 export default function WhyHuelWorks() {
   return (
     <section className="w-full bg-white py-12 sm:py-16">
-      <div className="max-w-[1354px] mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="max-w-[1654px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Heading row - Stacks on mobile, inline on tablet/desktop */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 sm:mb-10">
