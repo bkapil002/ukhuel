@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { User, Truck, PenSquare, Plus, HelpCircle, ShoppingBag, Sparkles, ChevronDown, ChevronRight, Menu, X, ArrowLeft } from 'lucide-react';
 import ShopAllMegaMenu from './ShopAllMegaMenu';
 import SimpleMegaMenu from './SimpleMegaMenu';
@@ -165,6 +166,8 @@ const shopByTabs = [
 ];
 
 export default function HuelHeader() {
+  const location = useLocation();
+  const isAuthPage = location.pathname === '/login' || location.pathname === '/register';
   const [tickerPaused, setTickerPaused] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null); // desktop mega menu: null | 'shop' | 'science' | 'about'
 
@@ -181,7 +184,7 @@ export default function HuelHeader() {
   };
 
   return (
-    <header className="relative z-50 w-full font-sans">
+    <header className="sticky top-0 z-50 w-full font-sans bg-white shadow-sm">
       {/* Top promo ticker */}
       <div
         className="bg-black text-white overflow-hidden whitespace-nowrap"
@@ -271,9 +274,9 @@ export default function HuelHeader() {
             <button aria-label="Help" className="hidden min-[1248px]:inline-flex text-black hover:text-neutral-600 transition-colors cursor-pointer">
               <HelpCircle size={22} strokeWidth={1.5} />
             </button>
-            <button aria-label="Account" className="text-black hover:text-neutral-600 transition-colors cursor-pointer">
+            <a href="/login" aria-label="Account" className="text-black hover:text-neutral-600 transition-colors cursor-pointer flex items-center justify-center">
               <User size={22} strokeWidth={1.5} />
-            </button>
+            </a>
             <button aria-label="Bag" className="text-black hover:text-neutral-600 transition-colors cursor-pointer">
               <ShoppingBag size={22} strokeWidth={1.5} />
             </button>
@@ -299,16 +302,18 @@ export default function HuelHeader() {
         </div>
       </div>
 
-      {/* Green ticker banner */}
-      <div className="bg-[#c7f1c5] overflow-hidden whitespace-nowrap border-b border-green-100">
-        <div className="flex items-center justify-center gap-24 py-2.5">
-          {[...Array(5)].map((_, i) => (
-            <span key={i} className="text-xs font-bold tracking-widest uppercase text-black shrink-0">
-              Our Tropical Limited Edition Meal
-            </span>
-          ))}
+      {/* Green ticker banner — hidden on login/register */}
+      {!isAuthPage && (
+        <div className="bg-[#c7f1c5] overflow-hidden whitespace-nowrap border-b border-green-100">
+          <div className="flex items-center justify-center gap-24 py-2.5">
+            {[...Array(5)].map((_, i) => (
+              <span key={i} className="text-xs font-bold tracking-widest uppercase text-black shrink-0">
+                Our Tropical Limited Edition Meal
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* ===================== MOBILE / TABLET MENU ===================== */}
       {mobilePanel && (
